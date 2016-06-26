@@ -36,9 +36,9 @@ namespace AutomationTests.PageModels
         public IWebElement FirstEmailSender { get; set; }
         [FindsBy(How = How.XPath, Using = "/html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div[2]/div[1]/div[1]/div/div/div[4]/div[1]/div/table/tbody/tr/td[8]/span/b")]
         public IWebElement FirstEmailDateTime { get; set; }
-        [FindsBy(How = How.XPath, Using = "/html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[1]")]
+        [FindsBy(How = How.CssSelector, Using = "#\\3a 2m")]
         public IWebElement Settings { get; set; }
-        [FindsBy(How = How.XPath, Using = "/html/body/div[22]/div/div[8]/div")]
+        [FindsBy(How = How.CssSelector, Using = "#ms > div")]
         public IWebElement SettingsOption { get; set; }
         [FindsBy(How = How.XPath, Using = "/html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div[1]/div[2]/div[2]/div[6]/a")]
         public IWebElement Forwarding { get; set; }
@@ -86,5 +86,11 @@ namespace AutomationTests.PageModels
         public IWebElement FirstMessageSender { get; set; }
         [FindsBy(How = How.XPath, Using = "/html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div[2]/div[1]/div[1]/div/div/div[7]/div/div[1]/div[2]/div/table/tbody/tr[1]/td[4]/div[2]/span")]
         public IWebElement InboxFirstMessageSender { get; set; }
+        [FindsBy(How = How.CssSelector, Using = "#\\3a 70 > a")]
+        public IWebElement ThemesTab { get; set; }
+        [FindsBy(How = How.CssSelector, Using = "#\\3a 2 > div > div > div > div > div > div > div:nth-child(10) > div > table > tbody > tr > td > div > a")]
+        public IWebElement SetThemLink { get; set; }
+        [FindsBy(How = How.CssSelector, Using = @"#\3a gc\2e custom-10 > div.a7U")]
+        public IWebElement BeachImage { get; set; }
     }
 }

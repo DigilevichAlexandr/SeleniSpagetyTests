@@ -80,5 +80,11 @@ namespace AutomationTests.PageRouters
             // TO DO
             return true; 
         }
+
+        public void NavigateSettings()
+        {
+            _boxPageModel.Settings.Click();
+            _boxPageModel.SettingsOption.Click();
+        }
     }
 }

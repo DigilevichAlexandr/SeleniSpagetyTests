@@ -22,3 +22,15 @@ I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagety
 I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.csprojResolveAssemblyReference.cache
 I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.exe
 I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.pdb
+f:\Users\Александр\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\AutomationTests\bin\Debug\AutomationTests.exe.config
+f:\Users\Александр\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\AutomationTests\bin\Debug\AutomationTests.exe
+f:\Users\Александр\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\AutomationTests\bin\Debug\AutomationTests.pdb
+f:\Users\Александр\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\AutomationTests\bin\Debug\nunit.framework.dll
+f:\Users\Александр\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\AutomationTests\bin\Debug\WebDriver.dll
+f:\Users\Александр\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\AutomationTests\bin\Debug\WebDriver.Support.dll
+f:\Users\Александр\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\AutomationTests\bin\Debug\nunit.framework.xml
+f:\Users\Александр\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\AutomationTests\bin\Debug\WebDriver.xml
+f:\Users\Александр\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\AutomationTests\bin\Debug\WebDriver.Support.xml
+f:\Users\Александр\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.csprojResolveAssemblyReference.cache
+f:\Users\Александр\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.exe
+f:\Users\Александр\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.pdb

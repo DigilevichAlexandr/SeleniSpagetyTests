@@ -53,7 +53,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        public void Forvard()
+        public void Forvard_Test()
         {
             _logonRouter.LogOn(AutomationTestsConstants.UserName2, AutomationTestsConstants.Password);
             _boxRouter.Forwarding();
@@ -98,7 +98,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        public void MailWithBoxPage()
+        public void MailWithBoxPage_Test()
         {
             _logonRouter.LogOn(AutomationTestsConstants.UserName1, AutomationTestsConstants.Password);
             _boxRouter.Send(AutomationTestsConstants.UserName2, "whith attachment", "Hello user2", "big_attachment.txt"); // not finished
@@ -106,64 +106,65 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        public void MailWithAttachment()
+        public void MailWithAttachment_Test()
         {
-            _boxPageModel.Settings.Click();
-            _boxPageModel.SettingsOption.Click();
-
-
+            _boxRouter.NavigateSettings();
         }
 
         [Test]
-        public void Themes()
+        public void Themes_Test()
         {
-            CommonHelper.GenerateFile(25);
+            _logonRouter.LogOn(AutomationTestsConstants.UserName1, AutomationTestsConstants.Password);
+            Driver.WaitForAjax();
+            _boxRouter.NavigateSettings();
+            _boxPageModel.SetThemLink.Click();
+            _boxPageModel.BeachImage.Click();
         }
 
         [Test]
-        public void SendMailWithAttachment()
-        {
-
-        }
-
-        [Test]
-        public void CreateShortcut()
+        public void SendMailWithAttachment_Test()
         {
 
         }
 
         [Test]
-        public void ChengeShortcut()
+        public void CreateShortcut_Test()
         {
 
         }
 
         [Test]
-        public void DeleteShortcut()
+        public void ChengeShortcut_Test()
         {
 
         }
 
         [Test]
-        public void MarkAsNotSpam()
+        public void DeleteShortcut_Test()
         {
 
         }
 
         [Test]
-        public void ChengingSignature()
+        public void MarkAsNotSpam_Test()
         {
 
         }
 
         [Test]
-        public void CheckStarSellection()
+        public void ChengingSignature_Test()
         {
 
         }
 
         [Test]
-        public void CheckVacation()
+        public void CheckStarSellection_Test()
+        {
+
+        }
+
+        [Test]
+        public void CheckVacation_Test()
         {
 
         }
