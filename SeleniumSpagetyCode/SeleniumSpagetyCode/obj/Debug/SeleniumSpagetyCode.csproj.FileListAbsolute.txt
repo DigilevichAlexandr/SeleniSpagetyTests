@@ -1,0 +1,11 @@
+D:\Projects\on-roaster\SeleniumSpagetyCode\SeleniumSpagetyCode\bin\Debug\SeleniumSpagetyCode.exe.config
+D:\Projects\on-roaster\SeleniumSpagetyCode\SeleniumSpagetyCode\bin\Debug\SeleniumSpagetyCode.exe
+D:\Projects\on-roaster\SeleniumSpagetyCode\SeleniumSpagetyCode\bin\Debug\SeleniumSpagetyCode.pdb
+D:\Projects\on-roaster\SeleniumSpagetyCode\SeleniumSpagetyCode\obj\Debug\SeleniumSpagetyCode.exe
+D:\Projects\on-roaster\SeleniumSpagetyCode\SeleniumSpagetyCode\obj\Debug\SeleniumSpagetyCode.pdb
+I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\SeleniumSpagetyCode\bin\Debug\SeleniumSpagetyCode.exe.config
+I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\SeleniumSpagetyCode\obj\Debug\SeleniumSpagetyCode.exe
+I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\SeleniumSpagetyCode\obj\Debug\SeleniumSpagetyCode.pdb
+I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\SeleniumSpagetyCode\bin\Debug\SeleniumSpagetyCode.exe
+I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\SeleniumSpagetyCode\bin\Debug\SeleniumSpagetyCode.pdb
+I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\SeleniumSpagetyCode\obj\Debug\SeleniumSpagetyCode.csprojResolveAssemblyReference.cache

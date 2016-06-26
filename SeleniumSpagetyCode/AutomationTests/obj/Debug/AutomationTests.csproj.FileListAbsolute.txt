@@ -1,0 +1,24 @@
+D:\Projects\on-roaster\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.csprojResolveAssemblyReference.cache
+D:\Projects\on-roaster\SeleniumSpagetyCode\AutomationTests\bin\Debug\AutomationTests.exe.config
+D:\Projects\on-roaster\SeleniumSpagetyCode\AutomationTests\bin\Debug\AutomationTests.exe
+D:\Projects\on-roaster\SeleniumSpagetyCode\AutomationTests\bin\Debug\AutomationTests.pdb
+D:\Projects\on-roaster\SeleniumSpagetyCode\AutomationTests\bin\Debug\nunit.framework.dll
+D:\Projects\on-roaster\SeleniumSpagetyCode\AutomationTests\bin\Debug\WebDriver.dll
+D:\Projects\on-roaster\SeleniumSpagetyCode\AutomationTests\bin\Debug\WebDriver.Support.dll
+D:\Projects\on-roaster\SeleniumSpagetyCode\AutomationTests\bin\Debug\nunit.framework.xml
+D:\Projects\on-roaster\SeleniumSpagetyCode\AutomationTests\bin\Debug\WebDriver.xml
+D:\Projects\on-roaster\SeleniumSpagetyCode\AutomationTests\bin\Debug\WebDriver.Support.xml
+D:\Projects\on-roaster\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.exe
+D:\Projects\on-roaster\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.pdb
+I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\AutomationTests\bin\Debug\AutomationTests.exe.config
+I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\AutomationTests\bin\Debug\AutomationTests.exe
+I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\AutomationTests\bin\Debug\AutomationTests.pdb
+I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\AutomationTests\bin\Debug\nunit.framework.dll
+I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\AutomationTests\bin\Debug\WebDriver.dll
+I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\AutomationTests\bin\Debug\WebDriver.Support.dll
+I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\AutomationTests\bin\Debug\nunit.framework.xml
+I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\AutomationTests\bin\Debug\WebDriver.xml
+I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\AutomationTests\bin\Debug\WebDriver.Support.xml
+I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.csprojResolveAssemblyReference.cache
+I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.exe
+I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.pdb
