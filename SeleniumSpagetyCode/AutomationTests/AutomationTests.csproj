@@ -61,7 +61,10 @@
     <Compile Include="Constants\AutomationTestsConstants.cs" />
     <Compile Include="Extentions\WebDriverExtensions.cs" />
     <Compile Include="Helpers\CommonHelper.cs" />
-    <Compile Include="PageModels\BoxPageModel.cs" />
+    <Compile Include="PageModels\Box\BoxPageModel.cs" />
+    <Compile Include="PageModels\Box\ComposePageModel.cs" />
+    <Compile Include="PageModels\Box\InboxPageModel.cs" />
+    <Compile Include="PageModels\Box\RoundButtonPageModel.cs" />
     <Compile Include="PageModels\LogOnPageModel.cs" />
     <Compile Include="PageModels\PageModel.cs" />
     <Compile Include="PageRouters\BoxRouter.cs" />
