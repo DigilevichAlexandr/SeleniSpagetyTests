@@ -12,7 +12,7 @@ namespace AutomationTests.PageModels
     {
         [FindsBy(How = How.XPath, Using = "//div[@role='button'][@gh='cm']")]
         public IWebElement ComposeButton { get; set; }
-        [FindsBy(How = How.XPath, Using = "/html/body/div[7]/div[3]/div/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[4]/div[1]/a/span")]
+        [FindsBy(How = How.XPath, Using = "//a[starts-with(@title,'Google Account:')]/span")]
         public IWebElement RoundWithYourLetter { get; set; }
         [FindsBy(How = How.XPath, Using = "//td/div[@role='checkbox']/div")]
         public IWebElement CheckFirstEmail { get; set; }
@@ -22,7 +22,8 @@ namespace AutomationTests.PageModels
         public IWebElement More { get; set; }
         [FindsBy(How = How.XPath, Using = "//a[starts-with(@title,'Spam')]")]
         public IWebElement Spam { get; set; }
-        [FindsBy(How = How.XPath, Using = "//div[@data-tooltip='Settings']/div[1]")] 
+        //for mazila "//div[3]/div[1]/div[2]/div[2]/div[@data-tooltip='Settings']/div[1]"
+        [FindsBy(How = How.XPath, Using = "//div[1]/div[1]/div[2]/div[2]/div[@data-tooltip='Settings']/div[1]")] 
         public IWebElement Settings { get; set; }
     }
 }

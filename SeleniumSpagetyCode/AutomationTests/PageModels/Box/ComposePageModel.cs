@@ -5,7 +5,7 @@ namespace AutomationTests.PageModels
 {
     public class ComposePageModel : PageModel
     {
-        [FindsBy(How = How.XPath, Using = "")]
+        [FindsBy(How = How.XPath, Using = "//textarea[@name='to']")]
         public IWebElement To { get; set; }
         [FindsBy(How = How.XPath, Using = "//input[@name='subjectbox']")]
         public IWebElement Subject { get; set; }
