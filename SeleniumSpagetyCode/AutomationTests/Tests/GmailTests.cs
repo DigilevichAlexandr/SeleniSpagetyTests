@@ -5,6 +5,7 @@ using AutomationTests.Constants;
 using AutomationTests.Extentions;
 using AutomationTests.Helpers;
 using AutomationTests.PageModels;
+using AutomationTests.PageModels.Settings;
 using AutomationTests.PageRouters;
 using NUnit.Framework;
 using OpenQA.Selenium;
@@ -20,6 +21,11 @@ namespace AutomationTests.Tests
 
         private LogOnPageModel _logonPageModel;
         private BoxPageModel _boxPageModel;
+        private InboxPageModel _inboxPageModel;
+        private ForwardingPageModel _forwardingPageModel;
+        private FiltersPageModel _filtersPageModel;
+        private SettingsDropdownPageModel _settingsDropdownPageModel;
+        private SettingsPageModel _settingsPageModel;
 
         [TestFixtureSetUp]
         public override void FixtureSetup()
@@ -31,6 +37,12 @@ namespace AutomationTests.Tests
 
             _logonPageModel = new LogOnPageModel();
             _boxPageModel = new BoxPageModel();
+            _inboxPageModel = new InboxPageModel();
+            _forwardingPageModel = new ForwardingPageModel();
+            _filtersPageModel = new FiltersPageModel();
+            _settingsDropdownPageModel = new SettingsDropdownPageModel();
+            _settingsPageModel = new SettingsPageModel();
+            
             CommonHelper.NavigateGmail();
         }
 
@@ -47,8 +59,8 @@ namespace AutomationTests.Tests
             _boxPageModel.More.Click();
             Driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
             _boxPageModel.Spam.Click();
-            var actualName = _boxPageModel.FirstEmailSender.Text;
-            var actualTime = _boxPageModel.FirstEmailDateTime.Text;
+            var actualName = _inboxPageModel.FirstEmailRowElement.FindElement(By.XPath(AutomationTestsConstants.ItemName)).Text;
+            ////var actualTime = _inboxPageModel.FirstEmailRowElement.FindElement(By.XPath("td[8]/span")).Text;
             var name = "jason todd";
             Assert.AreEqual(actualName, name);
         }
@@ -58,33 +70,33 @@ namespace AutomationTests.Tests
         {
             _logonRouter.LogOn(AutomationTestsConstants.UserName2, AutomationTestsConstants.Password);
             _boxRouter.Forwarding();
-            _boxPageModel.AddForwardingAddress.Click();
-            _boxPageModel.ForwardingAddressInput.SendKeys(AutomationTestsConstants.UserName3);
-            _boxPageModel.ForwardingNextButton.Click();
+            _forwardingPageModel.AddForwardingAddress.Click();
+            _forwardingPageModel.ForwardingAddressInput.SendKeys(AutomationTestsConstants.UserName3);
+            _forwardingPageModel.ForwardingNextButton.Click();
             Driver.SwitchTo().Window(Driver.WindowHandles.ToList().Last());
-            _boxPageModel.ProceedButton.Click();
+            _forwardingPageModel.ProceedButton.Click();
             Driver.SwitchTo().Window(Driver.WindowHandles.ToList().First());
-            _boxPageModel.ForwardingOkButton.Click();
+            _forwardingPageModel.ForwardingOkButton.Click();
             _boxRouter.Logout();
             _logonRouter.LogOn(AutomationTestsConstants.UserName3, AutomationTestsConstants.Password);
-            _boxPageModel.FirstEmailDiscription.Click();
+            _inboxPageModel.FirstEmailRowElement.FindElement(By.XPath(AutomationTestsConstants.ItemDiscription)).Click();
             Driver.WaitForAjax();
             Driver.SwitchTo().Window(Driver.WindowHandles.ToList().Last());
-            _boxPageModel.ForwardingConfirmButton.Click();
+            _forwardingPageModel.ForwardingConfirmButton.Click();
             Driver.SwitchTo().Window(Driver.WindowHandles.ToList().First());
             _boxRouter.Logout();
             _logonRouter.LogOn(AutomationTestsConstants.UserName2, AutomationTestsConstants.Password);
             _boxRouter.Forwarding();
-            _boxPageModel.ForwardingSaveChangesButton.Click();
-            _boxPageModel.FiltersTab.Click();
-            _boxPageModel.CreateFilterButton.Click();
-            _boxPageModel.FromInput.SendKeys(AutomationTestsConstants.UserName1);
-            _boxPageModel.HasAttachmentOption.Click();
-            _boxPageModel.CreateThisSearchFilter.Click();
-            _boxPageModel.FilterCreateOkButton.Click();
-            _boxPageModel.DeleteItCheck.Click();
-            _boxPageModel.MarkimportantCheck.Click();
-            _boxPageModel.CreateFilterPopupButton.Click();
+            _forwardingPageModel.ForwardingSaveChangesButton.Click();
+            _settingsPageModel.FiltersTab.Click();
+            _filtersPageModel.CreateFilterButton.Click();
+            _filtersPageModel.FromInput.SendKeys(AutomationTestsConstants.UserName1);
+            _filtersPageModel.HasAttachmentOption.Click();
+            _filtersPageModel.CreateThisSearchFilter.Click();
+            _filtersPageModel.FilterCreateOkButton.Click();
+            _filtersPageModel.DeleteItCheck.Click();
+            _filtersPageModel.MarkimportantCheck.Click();
+            _filtersPageModel.CreateFilterPopupButton.Click();
             _boxRouter.Logout();
             _logonRouter.LogOn(AutomationTestsConstants.UserName1, AutomationTestsConstants.Password);
             _boxRouter.Send(AutomationTestsConstants.UserName2, "whith attachment", "Hello user2", "attachment.txt");// not finished

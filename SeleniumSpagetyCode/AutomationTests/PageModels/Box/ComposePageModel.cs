@@ -13,5 +13,7 @@ namespace AutomationTests.PageModels
         public IWebElement MessageBody { get; set; }
         [FindsBy(How = How.XPath, Using = "//div[text()='Send']")]
         public IWebElement SendButton { get; set; }
+        [FindsBy(How = How.XPath, Using = "//div[@data-tooltip='Attach files']/div/div/div")]
+        public IWebElement AddAttachmentButton { get; set; }
     }
 }

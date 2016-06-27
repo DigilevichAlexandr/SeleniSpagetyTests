@@ -15,3 +15,6 @@ f:\Users\Александр\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\
 C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\SeleniumSpagetyCode\bin\Debug\SeleniumSpagetyCode.exe.config
 C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\SeleniumSpagetyCode\obj\Debug\SeleniumSpagetyCode.exe
 C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\SeleniumSpagetyCode\obj\Debug\SeleniumSpagetyCode.pdb
+f:\Users\Александр\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\SeleniumSpagetyCode\bin\Debug\SeleniumSpagetyCode.exe.config
+f:\Users\Александр\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\SeleniumSpagetyCode\obj\Debug\SeleniumSpagetyCode.exe
+f:\Users\Александр\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\SeleniumSpagetyCode\obj\Debug\SeleniumSpagetyCode.pdb

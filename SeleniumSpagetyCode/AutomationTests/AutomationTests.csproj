@@ -65,6 +65,11 @@
     <Compile Include="PageModels\Box\ComposePageModel.cs" />
     <Compile Include="PageModels\Box\InboxPageModel.cs" />
     <Compile Include="PageModels\Box\RoundButtonPageModel.cs" />
+    <Compile Include="PageModels\Box\SettingsDropdownPageModel.cs" />
+    <Compile Include="PageModels\Box\ThemesPageModel.cs" />
+    <Compile Include="PageModels\Settings\FiltersPageModel.cs" />
+    <Compile Include="PageModels\Settings\ForwardingPageModel.cs" />
+    <Compile Include="PageModels\Settings\SettingsPageModel.cs" />
     <Compile Include="PageModels\LogOnPageModel.cs" />
     <Compile Include="PageModels\PageModel.cs" />
     <Compile Include="PageRouters\BoxRouter.cs" />

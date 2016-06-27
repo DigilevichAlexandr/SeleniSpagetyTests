@@ -14,5 +14,8 @@
         public const string UserName3 = "digilevichuser3@gmail.com";
 
         public const string FilesPath = "Files";
+
+        public const string ItemName = "td[4]/div/span";
+        public const string ItemDiscription = "td[5]/div/span[2]";
     }
 }
