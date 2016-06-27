@@ -21,11 +21,14 @@ namespace AutomationTests.Tests
 
         private LogOnPageModel _logonPageModel;
         private BoxPageModel _boxPageModel;
+        private ComposePageModel _composePageModel;
+        private RoundButtonPageModel _roundButtonPageModel;
         private InboxPageModel _inboxPageModel;
         private ForwardingPageModel _forwardingPageModel;
         private FiltersPageModel _filtersPageModel;
         private SettingsDropdownPageModel _settingsDropdownPageModel;
         private SettingsPageModel _settingsPageModel;
+        private ThemesPageModel _themesPageModel;
 
         [TestFixtureSetUp]
         public override void FixtureSetup()
@@ -34,7 +37,8 @@ namespace AutomationTests.Tests
 
             _logonRouter = new LogonRouter();
             _boxRouter = new BoxRouter();
-
+            _composePageModel = new ComposePageModel();
+            _roundButtonPageModel = new RoundButtonPageModel();
             _logonPageModel = new LogOnPageModel();
             _boxPageModel = new BoxPageModel();
             _inboxPageModel = new InboxPageModel();
@@ -42,7 +46,7 @@ namespace AutomationTests.Tests
             _filtersPageModel = new FiltersPageModel();
             _settingsDropdownPageModel = new SettingsDropdownPageModel();
             _settingsPageModel = new SettingsPageModel();
-            
+            _themesPageModel = new ThemesPageModel();
             CommonHelper.NavigateGmail();
         }
 
@@ -130,8 +134,8 @@ namespace AutomationTests.Tests
             _logonRouter.LogOn(AutomationTestsConstants.UserName1, AutomationTestsConstants.Password);
             Driver.WaitForAjax();
             _boxRouter.NavigateSettings();
-            _boxPageModel.SetThemLink.Click();
-            _boxPageModel.BeachImage.Click();
+            //_themesPageModel.SetThemLink.Click();
+            _themesPageModel.BeachImage.Click();
 
         }
 
@@ -140,9 +144,9 @@ namespace AutomationTests.Tests
         {
             _logonRouter.LogOn(AutomationTestsConstants.UserName1, AutomationTestsConstants.Password);
             _boxPageModel.ComposeButton.Click();
-            _boxPageModel.ToInput.SendKeys(AutomationTestsConstants.UserName1);
+            _composePageModel.To.SendKeys(AutomationTestsConstants.UserName1);
             Actions actions = new Actions(Driver);
-            actions.MoveToElement(_boxPageModel.AddAttachmentButton, 1, 1).Perform();
+            actions.MoveToElement(_composePageModel.AddAttachmentButton, 1, 1).Perform();
 
         }
 

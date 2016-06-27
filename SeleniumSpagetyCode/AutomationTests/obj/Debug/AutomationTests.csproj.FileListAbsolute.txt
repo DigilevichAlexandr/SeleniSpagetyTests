@@ -34,3 +34,6 @@ f:\Users\Александр\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\
 f:\Users\Александр\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.csprojResolveAssemblyReference.cache
 f:\Users\Александр\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.exe
 f:\Users\Александр\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.pdb
+f:\Users\Александр\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.csprojResolveAssemblyReference.cache
+f:\Users\Александр\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.exe
+f:\Users\Александр\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.pdb
