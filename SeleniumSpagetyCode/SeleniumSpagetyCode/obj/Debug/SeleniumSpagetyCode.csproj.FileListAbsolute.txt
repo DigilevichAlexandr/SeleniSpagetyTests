@@ -12,3 +12,6 @@ I:\Мои проекты в ASP.NET\Epam\spagetytest\spagetytest\SeleniumSpagety
 f:\Users\Александр\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\SeleniumSpagetyCode\bin\Debug\SeleniumSpagetyCode.exe.config
 f:\Users\Александр\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\SeleniumSpagetyCode\obj\Debug\SeleniumSpagetyCode.exe
 f:\Users\Александр\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\SeleniumSpagetyCode\obj\Debug\SeleniumSpagetyCode.pdb
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\SeleniumSpagetyCode\bin\Debug\SeleniumSpagetyCode.exe.config
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\SeleniumSpagetyCode\obj\Debug\SeleniumSpagetyCode.exe
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests\SeleniumSpagetyCode\SeleniumSpagetyCode\obj\Debug\SeleniumSpagetyCode.pdb

@@ -8,26 +8,17 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace AutomationTests.PageModels
 {
-    class BoxPageModel:PageModel
+    class BoxPageModel : PageModel
     {
-        [FindsBy(How = How.XPath, Using = "//div[text()='COMPOSE']")]
+        [FindsBy(How = How.XPath, Using = "//div[@role='button'][@gh='cm']")]
         public IWebElement ComposeButton { get; set; }
-        [FindsBy(How = How.XPath, Using = "//textarea[@name='to']")]
-        public IWebElement ToInput { get; set; }
-        [FindsBy(How = How.XPath, Using = "//input[@name='subjectbox']")]
-        public IWebElement SubjectInput { get; set; }
-        [FindsBy(How = How.XPath, Using = "//div[@role='textbox']")]
-        public IWebElement MessageBodyInput { get; set; }
-        [FindsBy(How = How.XPath, Using = "//div[text()='Send']")]
-        public IWebElement SendButton { get; set; }
         [FindsBy(How = How.XPath, Using = "/html/body/div[7]/div[3]/div/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[4]/div[1]/a/span")]
         public IWebElement RoundWithYourLetter { get; set; }
-        [FindsBy(How = How.XPath, Using = "/html/body/div[7]/div[3]/div/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[4]/div[2]/div[3]/div[2]/a")]
-        public IWebElement SignOutButton { get; set; }
-        [FindsBy(How = How.XPath, Using = "/html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div[2]/div[1]/div[1]/div/div/div[7]/div/div[1]/div[2]/div/table/tbody/tr/td[2]/div")]
+        [FindsBy(How = How.XPath, Using = "//td/div[@role='checkbox']/div")]
         public IWebElement CheckFirstEmail { get; set; }
-        [FindsBy(How = How.XPath, Using = "/html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div[1]/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div")]
+        [FindsBy(How = How.XPath, Using = "//div[starts-with(@tooltip, 'Report spam')]/div/div")]
         public IWebElement ReportSpamButtom { get; set; }
+
         [FindsBy(How = How.XPath, Using = "//div[1][@class='G-asx T-I-J3 J-J5-Ji']")]
         public IWebElement More { get; set; }
         [FindsBy(How = How.XPath, Using = "//a[contains(text(),'Spam')]")]
@@ -77,7 +68,7 @@ namespace AutomationTests.PageModels
         [FindsBy(How = How.XPath, Using = "/html/body/div[27]/div/div[2]/div[4]/div/div[6]/input")]
         public IWebElement DeleteItCheck { get; set; }
         [FindsBy(How = How.XPath, Using = "/html/body/div[30]/div/div[2]/div[4]/div/div[8]/input")]
-        public IWebElement MarkimportantCheck{ get; set; }
+        public IWebElement MarkimportantCheck { get; set; }
         [FindsBy(How = How.XPath, Using = "/html/body/div[30]/div/div[2]/div[5]/div")]
         public IWebElement CreateFilterPopupButton { get; set; }
         [FindsBy(How = How.XPath, Using = "/html/body/div[13]/div/div/div/div[1]/div[3]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/table/tbody/tr[2]/td/div/div/div[4]/table/tbody/tr/td[4]/div/div[1]/div/div/div")]
