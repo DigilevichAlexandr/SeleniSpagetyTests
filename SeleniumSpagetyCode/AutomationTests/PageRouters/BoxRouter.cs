@@ -41,9 +41,9 @@ namespace AutomationTests.PageRouters
         {
             _boxPageModel.ComposeButton.Click();
             _driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
-            _boxPageModel.To.SendKeys(to);
-            _boxPageModel.Subject.SendKeys(subject);
-            _boxPageModel.MessageBody.SendKeys(message);
+            _boxPageModel.ToInput.SendKeys(to);
+            _boxPageModel.SubjectInput.SendKeys(subject);
+            _boxPageModel.MessageBodyInput.SendKeys(message);
             if (string.IsNullOrEmpty(attachment))
             {
                 // TO DO

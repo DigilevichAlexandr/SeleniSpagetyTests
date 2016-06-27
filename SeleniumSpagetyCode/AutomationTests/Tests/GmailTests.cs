@@ -8,6 +8,7 @@ using AutomationTests.PageModels;
 using AutomationTests.PageRouters;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 
 namespace AutomationTests.Tests
@@ -119,11 +120,17 @@ namespace AutomationTests.Tests
             _boxRouter.NavigateSettings();
             _boxPageModel.SetThemLink.Click();
             _boxPageModel.BeachImage.Click();
+
         }
 
         [Test]
         public void SendMailWithAttachment_Test()
         {
+            _logonRouter.LogOn(AutomationTestsConstants.UserName1, AutomationTestsConstants.Password);
+            _boxPageModel.ComposeButton.Click();
+            _boxPageModel.ToInput.SendKeys(AutomationTestsConstants.UserName1);
+            Actions actions = new Actions(Driver);
+            actions.MoveToElement(_boxPageModel.AddAttachmentButton, 1, 1).Perform();
 
         }
 

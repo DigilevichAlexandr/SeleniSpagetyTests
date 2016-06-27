@@ -13,11 +13,11 @@ namespace AutomationTests.PageModels
         [FindsBy(How = How.XPath, Using = "//div[text()='COMPOSE']")]
         public IWebElement ComposeButton { get; set; }
         [FindsBy(How = How.XPath, Using = "//textarea[@name='to']")]
-        public IWebElement To { get; set; }
+        public IWebElement ToInput { get; set; }
         [FindsBy(How = How.XPath, Using = "//input[@name='subjectbox']")]
-        public IWebElement Subject { get; set; }
+        public IWebElement SubjectInput { get; set; }
         [FindsBy(How = How.XPath, Using = "//div[@role='textbox']")]
-        public IWebElement MessageBody { get; set; }
+        public IWebElement MessageBodyInput { get; set; }
         [FindsBy(How = How.XPath, Using = "//div[text()='Send']")]
         public IWebElement SendButton { get; set; }
         [FindsBy(How = How.XPath, Using = "/html/body/div[7]/div[3]/div/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[4]/div[1]/a/span")]
