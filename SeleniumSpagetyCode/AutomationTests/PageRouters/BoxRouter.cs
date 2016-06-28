@@ -48,7 +48,8 @@ namespace AutomationTests.PageRouters
             _boxPageModel.Settings.Click();
             _settingsDropdownPageModel.SettingsOption.Click();
             _driver.WaitForAjax();
-            _settingsPageModel.Forwarding.Click();
+            _driver.Navigate().GoToUrl(AutomationTestsConstants.ForvardingTab);
+            ////_settingsPageModel.Forwarding.Click();
         }
 
         public void Send(string to, string subject, string message, string attachment = null)

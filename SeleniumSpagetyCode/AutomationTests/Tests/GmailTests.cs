@@ -64,9 +64,8 @@ namespace AutomationTests.Tests
             Driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
             _boxPageModel.Spam.Click();
             var actualName = _inboxPageModel.FirstEmailRowElement.FindElement(By.XPath(AutomationTestsConstants.ItemName)).Text;
-            ////var actualTime = _inboxPageModel.FirstEmailRowElement.FindElement(By.XPath("td[8]/span")).Text;
             var name = "jason todd";
-            Assert.AreEqual(actualName, name);
+            Assert.AreEqual(name, actualName);
         }
 
         [Test]
@@ -82,13 +81,15 @@ namespace AutomationTests.Tests
             Driver.SwitchTo().Window(Driver.WindowHandles.ToList().First());
             _forwardingPageModel.ForwardingOkButton.Click();
             _boxRouter.Logout();
+            _logonPageModel.AddAnotherAccount.Click();
             _logonRouter.LogOn(AutomationTestsConstants.UserName3, AutomationTestsConstants.Password);
-            _inboxPageModel.FirstEmailRowElement.FindElement(By.XPath(AutomationTestsConstants.ItemDiscription)).Click();
+            _inboxPageModel.FirstEmailRowElement.Click();
             Driver.WaitForAjax();
             Driver.SwitchTo().Window(Driver.WindowHandles.ToList().Last());
             _forwardingPageModel.ForwardingConfirmButton.Click();
             Driver.SwitchTo().Window(Driver.WindowHandles.ToList().First());
             _boxRouter.Logout();
+            _logonPageModel.AddAnotherAccount.Click();
             _logonRouter.LogOn(AutomationTestsConstants.UserName2, AutomationTestsConstants.Password);
             _boxRouter.Forwarding();
             _forwardingPageModel.ForwardingSaveChangesButton.Click();
@@ -102,14 +103,17 @@ namespace AutomationTests.Tests
             _filtersPageModel.MarkimportantCheck.Click();
             _filtersPageModel.CreateFilterPopupButton.Click();
             _boxRouter.Logout();
+            _logonPageModel.AddAnotherAccount.Click();
             _logonRouter.LogOn(AutomationTestsConstants.UserName1, AutomationTestsConstants.Password);
             _boxRouter.Send(AutomationTestsConstants.UserName2, "whith attachment", "Hello user2", "attachment.txt");// not finished
             _boxRouter.Send(AutomationTestsConstants.UserName2, "whith out attachment", "Hello user2");
             _boxRouter.Logout();
+            _logonPageModel.AddAnotherAccount.Click();
             _logonRouter.LogOn(AutomationTestsConstants.UserName2, AutomationTestsConstants.Password);
             Assert.IsTrue(_boxRouter.MessageIsInTrash("jason todd"));
             Assert.IsTrue(_boxRouter.MessageIsInInbox("jason todd") && _boxRouter.MessageMarkedUsImportant()); // not finished
             _boxRouter.Logout();
+            _logonPageModel.AddAnotherAccount.Click();
             _logonRouter.LogOn(AutomationTestsConstants.UserName3, AutomationTestsConstants.Password);
             Assert.IsTrue(_boxRouter.MessageIsInInbox("jason todd"));
         }

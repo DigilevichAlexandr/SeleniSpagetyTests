@@ -15,7 +15,8 @@
 
         public const string FilesPath = "Files";
 
-        public const string ItemName = "td[3]/div/span";
-        public const string ItemDiscription = "td[5]/div/span[2]";
+        public const string ItemName = "td[4]/div[2]/span";
+        public const string ItemDiscription = "td[6]";
+        public const string ForvardingTab = "https://mail.google.com/mail/#settings/fwdandpop";
     }
 }
