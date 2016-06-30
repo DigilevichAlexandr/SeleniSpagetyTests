@@ -46,3 +46,15 @@ f:\Users\Александр\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode
 f:\Users\Александр\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\AutomationTests\bin\Debug\nunit.framework.xml
 f:\Users\Александр\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\AutomationTests\bin\Debug\WebDriver.xml
 f:\Users\Александр\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\AutomationTests\bin\Debug\WebDriver.Support.xml
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\AutomationTests\bin\Debug\AutomationTests.exe.config
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\AutomationTests\bin\Debug\AutomationTests.exe
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\AutomationTests\bin\Debug\AutomationTests.pdb
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\AutomationTests\bin\Debug\nunit.framework.dll
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\AutomationTests\bin\Debug\WebDriver.dll
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\AutomationTests\bin\Debug\WebDriver.Support.dll
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\AutomationTests\bin\Debug\nunit.framework.xml
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\AutomationTests\bin\Debug\WebDriver.xml
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\AutomationTests\bin\Debug\WebDriver.Support.xml
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.csprojResolveAssemblyReference.cache
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.exe
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\AutomationTests\obj\Debug\AutomationTests.pdb

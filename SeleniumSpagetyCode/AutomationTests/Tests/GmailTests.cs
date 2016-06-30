@@ -4,6 +4,7 @@ using System.Threading;
 using AutomationTests.Constants;
 using AutomationTests.Extentions;
 using AutomationTests.Helpers;
+using AutomationTests.Models;
 using AutomationTests.PageModels;
 using AutomationTests.PageModels.Settings;
 using AutomationTests.PageRouters;
@@ -18,17 +19,13 @@ namespace AutomationTests.Tests
     {
         private LogonRouter _logonRouter;
         private BoxRouter _boxRouter;
-
-        private LogOnPageModel _logonPageModel;
         private BoxPageModel _boxPageModel;
         private ComposePageModel _composePageModel;
-        private RoundButtonPageModel _roundButtonPageModel;
-        private InboxPageModel _inboxPageModel;
-        private ForwardingPageModel _forwardingPageModel;
-        private FiltersPageModel _filtersPageModel;
-        private SettingsDropdownPageModel _settingsDropdownPageModel;
-        private SettingsPageModel _settingsPageModel;
         private ThemesPageModel _themesPageModel;
+        private User _user1;
+        private User _user2;
+        private User _user3;
+        private Letter _letter;
 
         [TestFixtureSetUp]
         public override void FixtureSetup()
@@ -38,88 +35,47 @@ namespace AutomationTests.Tests
             _logonRouter = new LogonRouter();
             _boxRouter = new BoxRouter();
             _composePageModel = new ComposePageModel();
-            _roundButtonPageModel = new RoundButtonPageModel();
-            _logonPageModel = new LogOnPageModel();
             _boxPageModel = new BoxPageModel();
-            _inboxPageModel = new InboxPageModel();
-            _forwardingPageModel = new ForwardingPageModel();
-            _filtersPageModel = new FiltersPageModel();
-            _settingsDropdownPageModel = new SettingsDropdownPageModel();
-            _settingsPageModel = new SettingsPageModel();
             _themesPageModel = new ThemesPageModel();
+            _user1 = new User() { Address = AutomationTestsConstants.UserName1, Password = AutomationTestsConstants.Password };
+            _user2 = new User() { Address = AutomationTestsConstants.UserName2, Password = AutomationTestsConstants.Password };
+            _user3 = new User() { Address = AutomationTestsConstants.UserName3, Password = AutomationTestsConstants.Password };
+            _letter = new Letter()
+            {
+                To = _user2.Address,
+                Subject = AutomationTestsConstants.Subject,
+                MessageBody = String.Format(AutomationTestsConstants.MessageText, _user2.Address)
+            };
+
             CommonHelper.NavigateGmail();
         }
-
+        
         [Test]
         public void SendingMessage_Test()
         {
-            _logonRouter.LogOn(AutomationTestsConstants.UserName1, AutomationTestsConstants.Password);
-            _boxRouter.Send(AutomationTestsConstants.UserName2, "test", "Hello user2");
-            _boxRouter.Logout();
-            _logonPageModel.AddAnotherAccount.Click();
-            _logonRouter.LogOn(AutomationTestsConstants.UserName2, AutomationTestsConstants.Password);
-            ////_boxPageModelpageModel.CheckFirstEmail.Click();
-            ////_boxPageModelpageModel.ReportSpamButtom.Click();
-            _boxPageModel.More.Click();
-            Driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
-            _boxPageModel.Spam.Click();
-            var actualName = _inboxPageModel.FirstEmailRowElement.FindElement(By.XPath(AutomationTestsConstants.ItemName)).Text;
-            ////var actualTime = _inboxPageModel.FirstEmailRowElement.FindElement(By.XPath("td[8]/span")).Text;
-            var name = "jason todd";
-            Assert.AreEqual(actualName, name);
+            _logonRouter.LogOn(_user1);
+            _boxRouter.Send(_user2, _letter);
+            _boxRouter.SwitchAccountTo(_user2);
+            _boxRouter.MarkAsSpamFirstMessage();
+            _boxRouter.NavigateToSpamFolder();
+            var actualName = _boxRouter.GetFirstMessageSenderName();
+            Assert.AreEqual(AutomationTestsConstants.SenderName,actualName);
         }
 
         [Test]
-        public void Forvard_Test()
+        public void Forward_Test()
         {
-            _logonRouter.LogOn(AutomationTestsConstants.UserName2, AutomationTestsConstants.Password);
-            _boxRouter.Forwarding();
-            _forwardingPageModel.AddForwardingAddress.Click();
-            _forwardingPageModel.ForwardingAddressInput.SendKeys(AutomationTestsConstants.UserName3);
-            _forwardingPageModel.ForwardingNextButton.Click();
-            Driver.SwitchTo().Window(Driver.WindowHandles.ToList().Last());
-            _forwardingPageModel.ProceedButton.Click();
-            Driver.SwitchTo().Window(Driver.WindowHandles.ToList().First());
-            _forwardingPageModel.ForwardingOkButton.Click();
+            _logonRouter.LogOn(_user2);
+            _boxRouter.AddForwardAddress(AutomationTestsConstants.UserName3);
+            _boxRouter.SwitchAccountTo(_user3);
+            _boxRouter.AcceptForwarding();
+            _boxRouter.SwitchAccountTo(_user2);
+            _boxRouter.AddFilter(AutomationTestsConstants.UserName1);
+            _boxRouter.SwitchAccountTo(_user1);
+            _boxRouter.Send(_user2, _letter);
+            _boxRouter.SwitchAccountTo(_user2);
+            Assert.IsTrue(_boxRouter.MessageIsInTrash(AutomationTestsConstants.SenderName));
             _boxRouter.Logout();
-            _logonRouter.LogOn(AutomationTestsConstants.UserName3, AutomationTestsConstants.Password);
-            _inboxPageModel.FirstEmailRowElement.FindElement(By.XPath(AutomationTestsConstants.ItemDiscription)).Click();
-            Driver.WaitForAjax();
-            Driver.SwitchTo().Window(Driver.WindowHandles.ToList().Last());
-            _forwardingPageModel.ForwardingConfirmButton.Click();
-            Driver.SwitchTo().Window(Driver.WindowHandles.ToList().First());
-            _boxRouter.Logout();
-            _logonRouter.LogOn(AutomationTestsConstants.UserName2, AutomationTestsConstants.Password);
-            _boxRouter.Forwarding();
-            _forwardingPageModel.ForwardingSaveChangesButton.Click();
-            _settingsPageModel.FiltersTab.Click();
-            _filtersPageModel.CreateFilterButton.Click();
-            _filtersPageModel.FromInput.SendKeys(AutomationTestsConstants.UserName1);
-            _filtersPageModel.HasAttachmentOption.Click();
-            _filtersPageModel.CreateThisSearchFilter.Click();
-            _filtersPageModel.FilterCreateOkButton.Click();
-            _filtersPageModel.DeleteItCheck.Click();
-            _filtersPageModel.MarkimportantCheck.Click();
-            _filtersPageModel.CreateFilterPopupButton.Click();
-            _boxRouter.Logout();
-            _logonRouter.LogOn(AutomationTestsConstants.UserName1, AutomationTestsConstants.Password);
-            _boxRouter.Send(AutomationTestsConstants.UserName2, "whith attachment", "Hello user2", "attachment.txt");// not finished
-            _boxRouter.Send(AutomationTestsConstants.UserName2, "whith out attachment", "Hello user2");
-            _boxRouter.Logout();
-            _logonRouter.LogOn(AutomationTestsConstants.UserName2, AutomationTestsConstants.Password);
-            Assert.IsTrue(_boxRouter.MessageIsInTrash("jason todd"));
-            Assert.IsTrue(_boxRouter.MessageIsInInbox("jason todd") && _boxRouter.MessageMarkedUsImportant()); // not finished
-            _boxRouter.Logout();
-            _logonRouter.LogOn(AutomationTestsConstants.UserName3, AutomationTestsConstants.Password);
-            Assert.IsTrue(_boxRouter.MessageIsInInbox("jason todd"));
-        }
-
-        [Test]
-        public void MailWithBoxPage_Test()
-        {
-            _logonRouter.LogOn(AutomationTestsConstants.UserName1, AutomationTestsConstants.Password);
-            _boxRouter.Send(AutomationTestsConstants.UserName2, "whith attachment", "Hello user2", "big_attachment.txt"); // not finished
-
         }
 
         [Test]
@@ -131,23 +87,20 @@ namespace AutomationTests.Tests
         [Test]
         public void Themes_Test()
         {
-            _logonRouter.LogOn(AutomationTestsConstants.UserName1, AutomationTestsConstants.Password);
+            _logonRouter.LogOn(_user1);
             Driver.WaitForAjax();
             _boxRouter.NavigateSettings();
-            //_themesPageModel.SetThemLink.Click();
             _themesPageModel.BeachImage.Click();
-
         }
 
         [Test]
         public void SendMailWithAttachment_Test()
         {
-            _logonRouter.LogOn(AutomationTestsConstants.UserName1, AutomationTestsConstants.Password);
+            _logonRouter.LogOn(_user1);
             _boxPageModel.ComposeButton.Click();
             _composePageModel.To.SendKeys(AutomationTestsConstants.UserName1);
             Actions actions = new Actions(Driver);
             actions.MoveToElement(_composePageModel.AddAttachmentButton, 1, 1).Perform();
-
         }
 
         [Test]

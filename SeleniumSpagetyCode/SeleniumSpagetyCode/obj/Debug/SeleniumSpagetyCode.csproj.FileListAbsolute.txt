@@ -21,3 +21,9 @@ f:\Users\Александр\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode
 f:\Users\Александр\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\SeleniumSpagetyCode\bin\Debug\SeleniumSpagetyCode.exe
 f:\Users\Александр\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\SeleniumSpagetyCode\bin\Debug\SeleniumSpagetyCode.pdb
 f:\Users\Александр\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\SeleniumSpagetyCode\obj\Debug\SeleniumSpagetyCode.csprojResolveAssemblyReference.cache
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\SeleniumSpagetyCode\bin\Debug\SeleniumSpagetyCode.exe.config
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\SeleniumSpagetyCode\obj\Debug\SeleniumSpagetyCode.exe
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\SeleniumSpagetyCode\obj\Debug\SeleniumSpagetyCode.pdb
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\SeleniumSpagetyCode\bin\Debug\SeleniumSpagetyCode.exe
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\SeleniumSpagetyCode\bin\Debug\SeleniumSpagetyCode.pdb
+C:\Users\Alexandr_Digilevich\Source\Repos\SeleniSpagetyTests2\SeleniumSpagetyCode\SeleniumSpagetyCode\obj\Debug\SeleniumSpagetyCode.csprojResolveAssemblyReference.cache

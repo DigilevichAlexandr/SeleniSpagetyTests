@@ -3,11 +3,10 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace AutomationTests.PageModels.Settings
 {
-    public class FiltersPageModel
+    public class FiltersPageModel : PageModel
     {
-        [FindsBy(How = How.XPath, Using = "//table[@role='list']/tbody/tr[9]/td/span[1]")]
+        [FindsBy(How = How.XPath, Using = "//tr[6][@role='listitem']/td/span[1]")]
         public IWebElement CreateFilterButton { get; set; }
-
         [FindsBy(How = How.XPath, Using = "//div/div[2]/span[2]/input[@role='combobox']")]
         public IWebElement FromInput { get; set; }
         [FindsBy(How = How.XPath, Using = "//div/div[7]/span/input[@type='checkbox']")]

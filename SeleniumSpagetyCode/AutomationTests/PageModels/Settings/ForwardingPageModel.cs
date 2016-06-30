@@ -20,7 +20,7 @@ namespace AutomationTests.PageModels.Settings
         public IWebElement ProceedButton { get; set; }
         [FindsBy(How = How.XPath, Using = "//button[@name='ok']")]
         public IWebElement ForwardingOkButton { get; set; }
-        [FindsBy(How = How.XPath, Using = "//a[1][starts-with(@href,'https://www.google.com/url?hl=en&q=https:/')]")]
+        [FindsBy(How = How.XPath, Using = "//a[4][starts-with(@href,'https://mail-settings.google.com/mail/')]")]
         public IWebElement ForwardingAcceptLink { get; set; }
         [FindsBy(How = How.XPath, Using = "//input[@value='Confirm']")]
         public IWebElement ForwardingConfirmButton { get; set; }
@@ -28,5 +28,7 @@ namespace AutomationTests.PageModels.Settings
         public IWebElement ForwardACopyOption { get; set; }
         [FindsBy(How = How.XPath, Using = "//button[@guidedhelpid='save_changes_button']")]
         public IWebElement ForwardingSaveChangesButton { get; set; }
+        [FindsBy(How = How.XPath, Using = "//tr[4]/td/div/button[2]")]
+        public IWebElement CancelButton { get; set; }
     }
 }

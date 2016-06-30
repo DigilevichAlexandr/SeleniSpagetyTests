@@ -1,4 +1,28 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=1C7E3C6A8A02446D8EF23632E04F9231/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=1C7E3C6A8A02446D8EF23632E04F9231/GroupingIndex/@EntryValue">4</s:Int64>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=1C7E3C6A8A02446D8EF23632E04F9231/Name/@EntryValue">Forvard_Test</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=1C7E3C6A8A02446D8EF23632E04F9231/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;/Session&gt;</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=2ADD2BC3BAFD4180866DB521FBD830D7/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=2ADD2BC3BAFD4180866DB521FBD830D7/GroupingIndex/@EntryValue">4</s:Int64>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=2ADD2BC3BAFD4180866DB521FBD830D7/Name/@EntryValue">Forward_Test #5</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=2ADD2BC3BAFD4180866DB521FBD830D7/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;/Session&gt;</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=32E3CEF990874F1CAF6D62A72D70AE22/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=32E3CEF990874F1CAF6D62A72D70AE22/GroupingIndex/@EntryValue">4</s:Int64>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=32E3CEF990874F1CAF6D62A72D70AE22/Name/@EntryValue">Forward_Test #6</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=32E3CEF990874F1CAF6D62A72D70AE22/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;/Session&gt;</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=372ADD45D6AC426693646C2485B8DCFF/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=372ADD45D6AC426693646C2485B8DCFF/GroupingIndex/@EntryValue">4</s:Int64>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=372ADD45D6AC426693646C2485B8DCFF/Name/@EntryValue">Forward_Test #2</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=372ADD45D6AC426693646C2485B8DCFF/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;/Session&gt;</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=3DD6FE95240D49A6BAFB5F8B16F190CF/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=3DD6FE95240D49A6BAFB5F8B16F190CF/GroupingIndex/@EntryValue">4</s:Int64>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=3DD6FE95240D49A6BAFB5F8B16F190CF/Name/@EntryValue">Forward_Test #4</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=3DD6FE95240D49A6BAFB5F8B16F190CF/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;/Session&gt;</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=3FB89A1F73E54A2388134E86E918E517/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=3FB89A1F73E54A2388134E86E918E517/GroupingIndex/@EntryValue">4</s:Int64>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=3FB89A1F73E54A2388134E86E918E517/Name/@EntryValue">Forvard_Test #2</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=3FB89A1F73E54A2388134E86E918E517/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;/Session&gt;</s:String>
 	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=4C9FFDBAF2024231B47AF96882B47BB7/@KeyIndexDefined">True</s:Boolean>
 	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=4C9FFDBAF2024231B47AF96882B47BB7/GroupingIndex/@EntryValue">4</s:Int64>
 	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=4C9FFDBAF2024231B47AF96882B47BB7/Name/@EntryValue">SendingMessage_Test #8</s:String>
@@ -11,10 +35,34 @@
 	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=5CE415F959784179AE682CFEBD040B13/GroupingIndex/@EntryValue">4</s:Int64>
 	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=5CE415F959784179AE682CFEBD040B13/Name/@EntryValue">SendingMessage_Test</s:String>
 	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=5CE415F959784179AE682CFEBD040B13/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;/Session&gt;</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=5F9101DEDB554ADC8EAA9A2D91CB76F8/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=5F9101DEDB554ADC8EAA9A2D91CB76F8/GroupingIndex/@EntryValue">4</s:Int64>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=5F9101DEDB554ADC8EAA9A2D91CB76F8/Name/@EntryValue">Forward_Test #3</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=5F9101DEDB554ADC8EAA9A2D91CB76F8/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;/Session&gt;</s:String>
 	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=71627CA49D854AC78064BE009BDD0870/@KeyIndexDefined">True</s:Boolean>
 	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=71627CA49D854AC78064BE009BDD0870/GroupingIndex/@EntryValue">4</s:Int64>
 	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=71627CA49D854AC78064BE009BDD0870/Name/@EntryValue">SendingMessage_Test #7</s:String>
 	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=71627CA49D854AC78064BE009BDD0870/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;/Session&gt;</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=7F51F417F5E74E65BC263594A152ED07/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=7F51F417F5E74E65BC263594A152ED07/GroupingIndex/@EntryValue">4</s:Int64>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=7F51F417F5E74E65BC263594A152ED07/Name/@EntryValue">Forward_Test</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=7F51F417F5E74E65BC263594A152ED07/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;/Session&gt;</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=8EBC6FEBD3A142C1A9683A0612CA7604/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=8EBC6FEBD3A142C1A9683A0612CA7604/GroupingIndex/@EntryValue">4</s:Int64>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=8EBC6FEBD3A142C1A9683A0612CA7604/Name/@EntryValue">Forvard_Test #3</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=8EBC6FEBD3A142C1A9683A0612CA7604/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;/Session&gt;</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=9AE1B344E59043B18D73565D5007C6B1/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=9AE1B344E59043B18D73565D5007C6B1/GroupingIndex/@EntryValue">4</s:Int64>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=9AE1B344E59043B18D73565D5007C6B1/Name/@EntryValue">Forvard_Test #4</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=9AE1B344E59043B18D73565D5007C6B1/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;/Session&gt;</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=AECF0B084C844AE895D320E95A9CB3F7/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=AECF0B084C844AE895D320E95A9CB3F7/GroupingIndex/@EntryValue">4</s:Int64>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=AECF0B084C844AE895D320E95A9CB3F7/Name/@EntryValue">SendingMessage_Test</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=AECF0B084C844AE895D320E95A9CB3F7/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;e Id="AutomationTests.Tests.GmailTests.SendingMessage_Test" Project="384D15CF-2CC1-4EBC-B234-B72EAFF02BA1" Provider="nUnit" /&gt;&lt;e Id="AutomationTests.Tests.GmailTests" Project="384D15CF-2CC1-4EBC-B234-B72EAFF02BA1" Provider="nUnit" /&gt;&lt;/Session&gt;</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=BA1D1ACDE3D8451DA33262844BE8A004/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=BA1D1ACDE3D8451DA33262844BE8A004/GroupingIndex/@EntryValue">4</s:Int64>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=BA1D1ACDE3D8451DA33262844BE8A004/Name/@EntryValue">SendingMessage_Test</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=BA1D1ACDE3D8451DA33262844BE8A004/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;/Session&gt;</s:String>
 	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=CBA3F00BDF724321B8041633474E1ECF/@KeyIndexDefined">True</s:Boolean>
 	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=CBA3F00BDF724321B8041633474E1ECF/GroupingIndex/@EntryValue">4</s:Int64>
 	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=CBA3F00BDF724321B8041633474E1ECF/Name/@EntryValue">SendingMessage_Test #4</s:String>
@@ -23,6 +71,10 @@
 	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=CCFF52DAC8B1498E9A4B86EF8DA8D1FE/GroupingIndex/@EntryValue">4</s:Int64>
 	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=CCFF52DAC8B1498E9A4B86EF8DA8D1FE/Name/@EntryValue">SendingMessage_Test</s:String>
 	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=CCFF52DAC8B1498E9A4B86EF8DA8D1FE/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;/Session&gt;</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=DD73BAC27BA9452AA044928B7FE2579D/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=DD73BAC27BA9452AA044928B7FE2579D/GroupingIndex/@EntryValue">4</s:Int64>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=DD73BAC27BA9452AA044928B7FE2579D/Name/@EntryValue">Forward_Test #7</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=DD73BAC27BA9452AA044928B7FE2579D/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;/Session&gt;</s:String>
 	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=E5508F013C2E446C98AB4F5E9AA90848/@KeyIndexDefined">True</s:Boolean>
 	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=E5508F013C2E446C98AB4F5E9AA90848/GroupingIndex/@EntryValue">4</s:Int64>
 	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=E5508F013C2E446C98AB4F5E9AA90848/Name/@EntryValue">SendingMessage_Test #6</s:String>
@@ -34,4 +86,8 @@
 	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=EE53DB5674E849769BABFC8FBED1D293/@KeyIndexDefined">True</s:Boolean>
 	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=EE53DB5674E849769BABFC8FBED1D293/GroupingIndex/@EntryValue">4</s:Int64>
 	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=EE53DB5674E849769BABFC8FBED1D293/Name/@EntryValue">SendingMessage_Test #2</s:String>
-	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=EE53DB5674E849769BABFC8FBED1D293/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;/Session&gt;</s:String></wpf:ResourceDictionary>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=EE53DB5674E849769BABFC8FBED1D293/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;/Session&gt;</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=FB9D85F061DB4AE686A42D329E839B2F/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=FB9D85F061DB4AE686A42D329E839B2F/GroupingIndex/@EntryValue">4</s:Int64>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=FB9D85F061DB4AE686A42D329E839B2F/Name/@EntryValue">SendingMessage_Test #2</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=FB9D85F061DB4AE686A42D329E839B2F/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;e Id="AutomationTests.Tests.GmailTests" Project="384D15CF-2CC1-4EBC-B234-B72EAFF02BA1" Provider="nUnit" /&gt;&lt;e Id="AutomationTests.Tests.GmailTests.SendingMessage_Test" Project="384D15CF-2CC1-4EBC-B234-B72EAFF02BA1" Provider="nUnit" /&gt;&lt;/Session&gt;</s:String></wpf:ResourceDictionary>

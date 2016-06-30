@@ -16,14 +16,14 @@ namespace AutomationTests.PageModels
         public IWebElement RoundWithYourLetter { get; set; }
         [FindsBy(How = How.XPath, Using = "//td/div[@role='checkbox']/div")]
         public IWebElement CheckFirstEmail { get; set; }
-        [FindsBy(How = How.XPath, Using = "//div[starts-with(@tooltip, 'Report spam')]/div/div")]
+        [FindsBy(How = How.XPath, Using = "//div[starts-with(@data-tooltip, 'Report spam')]")]
         public IWebElement ReportSpamButtom { get; set; }
         [FindsBy(How = How.XPath, Using = "//div[@role='navigation']/div/div/span[@role='button'][@gh='mll']/span")]
         public IWebElement More { get; set; }
         [FindsBy(How = How.XPath, Using = "//a[starts-with(@title,'Spam')]")]
         public IWebElement Spam { get; set; }
         //for mazila "//div[3]/div[1]/div[2]/div[2]/div[@data-tooltip='Settings']/div[1]"
-        [FindsBy(How = How.XPath, Using = "//div[1]/div[1]/div[2]/div[2]/div[@data-tooltip='Settings']/div[1]")] 
+        [FindsBy(How = How.XPath, Using = "//div[@gh='s']/div[@data-tooltip='Settings']/div[1]")] 
         public IWebElement Settings { get; set; }
     }
 }

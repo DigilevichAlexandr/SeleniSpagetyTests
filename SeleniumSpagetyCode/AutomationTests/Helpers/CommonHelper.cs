@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using AutomationTests.Constants;
@@ -25,6 +26,15 @@ namespace AutomationTests.Helpers
         {
             // TO DO
             return string.Empty;
+        }
+
+        public static void AcceptPopap()
+        {
+            try
+            {
+                Driver.SwitchTo().Alert().Accept();
+            }
+            catch (NoAlertPresentException) {}
         }
     }
 
