@@ -56,10 +56,11 @@ namespace AutomationTests.Tests
             _logonRouter.LogOn(_user1);
             _boxRouter.Send(_user2, _letter);
             _boxRouter.SwitchAccountTo(_user2);
-            _boxRouter.MarkAsSpamFirstMessage();
+            _boxRouter.MarkFirstMessageAsSpam();
             _boxRouter.NavigateToSpamFolder();
-            var actualName = _boxRouter.GetFirstMessageSenderName();
+            var actualName = _boxRouter.GetFirstMessageSenderNameFromSpam();
             Assert.AreEqual(AutomationTestsConstants.SenderName,actualName);
+            _boxRouter.CleareSpam();
         }
 
         [Test]

@@ -71,6 +71,7 @@
     <Compile Include="PageModels\Box\InboxPageModel.cs" />
     <Compile Include="PageModels\Box\RoundButtonPageModel.cs" />
     <Compile Include="PageModels\Box\SettingsDropdownPageModel.cs" />
+    <Compile Include="PageModels\Box\SpamPageModel.cs" />
     <Compile Include="PageModels\Box\ThemesPageModel.cs" />
     <Compile Include="PageModels\Settings\FiltersPageModel.cs" />
     <Compile Include="PageModels\Settings\ForwardingPageModel.cs" />

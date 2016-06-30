@@ -10,6 +10,8 @@ using AutomationTests.Models;
 using AutomationTests.PageModels;
 using AutomationTests.PageModels.Settings;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Support.UI;
 
 namespace AutomationTests.PageRouters
 {
@@ -25,6 +27,7 @@ namespace AutomationTests.PageRouters
         private ForwardingPageModel _forwardingPageModel;
         private FiltersPageModel _filtersPageModel;
         private LogonRouter _logonRouter;
+        private SpamPageModel _spamPageModel;
 
         public BoxRouter()
         {
@@ -37,6 +40,7 @@ namespace AutomationTests.PageRouters
             _forwardingPageModel = new ForwardingPageModel();
             _filtersPageModel = new FiltersPageModel();
             _logonRouter = new LogonRouter();
+            _spamPageModel = new SpamPageModel();
         }
 
         public void AddForwardAddress(string address)
@@ -110,14 +114,25 @@ namespace AutomationTests.PageRouters
 
         public void NavigateToSpamFolder()
         {
-            _boxPageModel.More.Click();
-            _driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
-            _boxPageModel.Spam.Click();
+            _driver.Navigate().GoToUrl("https://mail.google.com/mail/#spam");
+            _driver.WaitForAjax();
+        }
+
+        public void CleareSpam()
+        {
+            NavigateToSpamFolder();
+            _spamPageModel.SelectAllCheckbox.Click();
+            _spamPageModel.NotSpamButton.Click();
         }
 
         public string GetFirstMessageSenderName()
         {
             return _inboxPageModel.FirstEmailRowElement.FindElement(By.XPath(AutomationTestsConstants.ItemName)).Text;
+        }
+
+        public string GetFirstMessageSenderNameFromSpam()
+        {
+            return _inboxPageModel.FirstEmailRowElementInSpam.Text;
         }
 
         public void SwitchAccountTo(User user)
@@ -126,10 +141,13 @@ namespace AutomationTests.PageRouters
             _logonRouter.LogOn(user);
         }
 
-        public void MarkAsSpamFirstMessage()
+        public void MarkFirstMessageAsSpam()
         {
             _boxPageModel.CheckFirstEmail.Click();
+            Actions action = new Actions(_driver);
+            action.MoveToElement(_driver.FindElement(By.XPath("//div[@gh='mtb']"))).Perform();
             _boxPageModel.ReportSpamButtom.Click();
+            _driver.WaitForAjax();
         }
 
         public bool MessageIsInTrash(string name)
