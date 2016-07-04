@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Net.Mail;
+using System.Net.Mime;
 using System.Threading;
+using System.Windows.Forms;
 using AutomationTests.Constants;
 using AutomationTests.Extentions;
 using AutomationTests.Helpers;
@@ -18,7 +22,7 @@ namespace AutomationTests.PageRouters
     public class BoxRouter
     {
         private IWebDriver _driver;
-        
+
         private BoxPageModel _boxPageModel;
         private ComposePageModel _composePageModel;
         private InboxPageModel _inboxPageModel;
@@ -90,7 +94,7 @@ namespace AutomationTests.PageRouters
             {
                 chooseButton.First().Click();
             }
-                
+
             _driver.FindElement(By.Id("account-chooser-add-account")).Click();
         }
 
@@ -100,16 +104,76 @@ namespace AutomationTests.PageRouters
             _settingsRouter.NavigateForwarding();
         }
 
-        public void Send(User user, Letter letter)
+        public void Send(User user, Letter letter, string name = null)
         {
             _boxPageModel.ComposeButton.Click();
+            FillMessage(user, letter);
+            if (!string.IsNullOrEmpty(name))
+            {
+                AttachFile(name);
+                if (IsPopupAppeared())
+                {
+                    _driver.FindElement(By.XPath(AutomationTestsConstants.PopupCloseButtonXpath)).Click();
+                    if (IsPopupAppeared())
+                    {
+                        _driver.FindElement(By.XPath(AutomationTestsConstants.PopupCloseButtonXpath)).Click();
+                    }
+                }
+            }
+
+            Thread.Sleep(1000);
+            _composePageModel.SendButton.Click();
+            Thread.Sleep(5000);
+        }
+
+        public void FillMessage(User user, Letter letter)
+        {
             _driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
             _composePageModel.To.SendKeys(letter.To);
             _composePageModel.Subject.SendKeys(letter.Subject);
             _composePageModel.MessageBody.SendKeys(letter.MessageBody);
+        }
 
-            _composePageModel.SendButton.Click();
-            Thread.Sleep(5000);
+        public void AttachFile(string name)
+        {
+            _composePageModel.AddAttachmentButton.Click();
+            Thread.Sleep(3000);
+
+            //for (int i = 0; i < 4; i++)
+            //{
+            //    SendKeys.SendWait(@"{TAB}");
+            //}
+
+            //SendKeys.SendWait(@"+{F10}");
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    SendKeys.SendWait(@"{DOWN}");
+            //}
+
+            //SendKeys.SendWait(@"{Enter}");
+            //Thread.Sleep(3000);
+            //SendKeys.SendWait(@"{BS}");
+
+            //SendKeys.SendWait(AutomationTestsConstants.TestFilePath);
+            //SendKeys.SendWait(@"{Enter}");
+
+            //for (int i = 0; i < 8; i++)
+            //{
+            //    SendKeys.SendWait(@"{TAB}");
+            //}
+
+            SendKeys.SendWait(name);
+            SendKeys.SendWait(@"{Enter}");
+        }
+
+        public bool IsPopupAppeared()
+        {
+            if (_driver.FindElements(By.XPath(AutomationTestsConstants.PopupCloseButtonXpath)).Any())
+            {
+                return true;
+            }
+
+            return false;
         }
 
         public void NavigateToSpamFolder()
@@ -127,7 +191,7 @@ namespace AutomationTests.PageRouters
 
         public string GetFirstMessageSenderName()
         {
-            return _inboxPageModel.FirstEmailRowElement.FindElement(By.XPath(AutomationTestsConstants.ItemName)).Text;
+            return _inboxPageModel.FirstEmailRowElement.GetAttribute("email");
         }
 
         public string GetFirstMessageSenderNameFromSpam()
@@ -175,7 +239,7 @@ namespace AutomationTests.PageRouters
         public bool MessageMarkedUsImportant()
         {
             // TO DO
-            return true; 
+            return true;
         }
 
         public void NavigateSettings()
@@ -186,6 +250,20 @@ namespace AutomationTests.PageRouters
         public void NavigateChooseAnAccount()
         {
             _driver.Navigate().GoToUrl(AutomationTestsConstants.ChoseAnAccountUrl);
+        }
+
+        public void NavigateToPickImage()
+        {
+            _driver.Navigate().GoToUrl("https://mail.google.com/mail/u/0/?tm=1#inbox/themes");
+            _driver.WaitForAjax();
+        }
+
+        public string GetVacationDateFromTop()
+        {
+            var all = _driver.FindElement(By.XPath(string.Format("{0}{1}{2}", AutomationTestsConstants.TopVacationXpath, AutomationTestsConstants.Span, AutomationTestsConstants.SlashTwoDots))).Text;
+            var endNow = _driver.FindElement(By.XPath(string.Format("{0}{1}[1]", AutomationTestsConstants.TopVacationXpath, AutomationTestsConstants.Span))).Text;
+            var settings = _driver.FindElement(By.XPath(string.Format("{0}{1}[2]", AutomationTestsConstants.TopVacationXpath, AutomationTestsConstants.Span))).Text;
+            return all.Replace(endNow, string.Empty).Replace(settings, string.Empty).TrimEnd();
         }
     }
 }

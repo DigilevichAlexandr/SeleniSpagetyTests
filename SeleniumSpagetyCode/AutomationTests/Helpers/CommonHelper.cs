@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using AutomationTests.Constants;
@@ -22,10 +24,27 @@ namespace AutomationTests.Helpers
             Driver.Navigate().GoToUrl(AutomationTestsConstants.GmailAddres);
         }
 
-        public static string GenerateFile(int megabytes)
+        public static void GenerateFile(string fileName, int megaBytes)
         {
-            // TO DO
-            return string.Empty;
+            try
+            {
+                if (File.Exists(fileName))
+                {
+                    File.Delete(fileName);
+                }
+
+                var user = Environment.UserName;
+
+                byte[] data = new byte[megaBytes * 1024 * 1024];
+                Random rng = new Random();
+                rng.NextBytes(data);
+                File.WriteAllBytes(string.Format("{0}{1}",AutomationTestsConstants.TestFilePath, fileName),data);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public static void AcceptPopap()
@@ -34,7 +53,7 @@ namespace AutomationTests.Helpers
             {
                 Driver.SwitchTo().Alert().Accept();
             }
-            catch (NoAlertPresentException) {}
+            catch (NoAlertPresentException) { }
         }
     }
 

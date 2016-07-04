@@ -15,5 +15,7 @@ namespace AutomationTests.PageModels
         public IWebElement SendButton { get; set; }
         [FindsBy(How = How.XPath, Using = "//div[@data-tooltip='Attach files']/div/div/div")]
         public IWebElement AddAttachmentButton { get; set; }
+        [FindsBy(How = How.XPath, Using = "//div[@class='gmail_signature']/div")]
+        public IWebElement Signature { get; set; }
     }
 }

@@ -25,5 +25,10 @@ namespace AutomationTests.PageModels
         //for mazila "//div[3]/div[1]/div[2]/div[2]/div[@data-tooltip='Settings']/div[1]"
         [FindsBy(How = How.XPath, Using = "//div[@gh='s']/div[@data-tooltip='Settings']/div[1]")] 
         public IWebElement Settings { get; set; }
+        [FindsBy(How = How.XPath, Using = "//span[1][@title='Not starred']")]
+        public IWebElement Star { get; set; }
+        [FindsBy(How = How.XPath, Using = "//a[@target='_top']/../../../div[3]/div/div/span[1]")]
+        public IWebElement VacationDateOnTop { get; set; }
+
     }
 }

@@ -5,7 +5,7 @@ namespace AutomationTests.PageModels
 {
     public class ThemesPageModel:PageModel
     {
-        [FindsBy(How = How.CssSelector, Using = "//div/div[11][@role='option']/img")]
+        [FindsBy(How = How.XPath, Using = "//div/div[3][@role='option']")]
         public IWebElement BeachImage { get; set; }
     }
 }

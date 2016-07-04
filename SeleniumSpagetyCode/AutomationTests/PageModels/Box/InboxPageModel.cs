@@ -7,7 +7,7 @@ namespace AutomationTests.PageModels
     {
         [FindsBy(How = How.XPath, Using = "//a[starts-with(@href,'https://mail.google.com/mail/u/0/#inbox')]")]
         public IWebElement Inbox { get; set; }
-        [FindsBy(How = How.XPath, Using = "//div[@role='main']/div/div/div/table/tbody/tr[1]")]
+        [FindsBy(How = How.XPath, Using = "//span[@email]")]
         public IWebElement FirstEmailRowElement { get; set; }
         [FindsBy(How = How.XPath, Using = "//div[1]/div/table/tbody/tr[1]/td[4]/div[2]/span")]
         public IWebElement FirstEmailRowElementInSpam { get; set; }
