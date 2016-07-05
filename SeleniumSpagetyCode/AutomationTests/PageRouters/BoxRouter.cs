@@ -13,6 +13,8 @@ using AutomationTests.Helpers;
 using AutomationTests.Models;
 using AutomationTests.PageModels;
 using AutomationTests.PageModels.Settings;
+using AutomationTests.PageModels.Shortcuts;
+using NUnit.Framework.Constraints;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
@@ -32,6 +34,8 @@ namespace AutomationTests.PageRouters
         private FiltersPageModel _filtersPageModel;
         private LogonRouter _logonRouter;
         private SpamPageModel _spamPageModel;
+        private AddLabelPageModel _addLabelPageModel;
+        private MyShortcutMenuPageModel _myShortcutMenuPageModel;
 
         public BoxRouter()
         {
@@ -45,6 +49,8 @@ namespace AutomationTests.PageRouters
             _filtersPageModel = new FiltersPageModel();
             _logonRouter = new LogonRouter();
             _spamPageModel = new SpamPageModel();
+            _addLabelPageModel = new AddLabelPageModel();
+            _myShortcutMenuPageModel = new MyShortcutMenuPageModel();
         }
 
         public void AddForwardAddress(string address)
@@ -104,10 +110,10 @@ namespace AutomationTests.PageRouters
             _settingsRouter.NavigateForwarding();
         }
 
-        public void Send(User user, Letter letter, string name = null)
+        public void Send(Letter letter, string name = null)
         {
             _boxPageModel.ComposeButton.Click();
-            FillMessage(user, letter);
+            FillMessage(letter);
             if (!string.IsNullOrEmpty(name))
             {
                 AttachFile(name);
@@ -126,7 +132,7 @@ namespace AutomationTests.PageRouters
             Thread.Sleep(5000);
         }
 
-        public void FillMessage(User user, Letter letter)
+        public void FillMessage(Letter letter)
         {
             _driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
             _composePageModel.To.SendKeys(letter.To);
@@ -136,34 +142,27 @@ namespace AutomationTests.PageRouters
 
         public void AttachFile(string name)
         {
+            Actions actions = new Actions(_driver);
+            actions.MoveToElement(_composePageModel.AddAttachmentButton, 1, 1).Perform();
             _composePageModel.AddAttachmentButton.Click();
-            Thread.Sleep(3000);
-
-            //for (int i = 0; i < 4; i++)
-            //{
-            //    SendKeys.SendWait(@"{TAB}");
-            //}
-
-            //SendKeys.SendWait(@"+{F10}");
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    SendKeys.SendWait(@"{DOWN}");
-            //}
-
-            //SendKeys.SendWait(@"{Enter}");
-            //Thread.Sleep(3000);
-            //SendKeys.SendWait(@"{BS}");
-
-            //SendKeys.SendWait(AutomationTestsConstants.TestFilePath);
-            //SendKeys.SendWait(@"{Enter}");
-
-            //for (int i = 0; i < 8; i++)
-            //{
-            //    SendKeys.SendWait(@"{TAB}");
-            //}
+            Thread.Sleep(6000);
 
             SendKeys.SendWait(name);
             SendKeys.SendWait(@"{Enter}");
+        }
+
+        public void NavigateToSent()
+        {
+            _driver.Navigate().GoToUrl(AutomationTestsConstants.SentUrl);
+            _driver.WaitForAjax();
+        }
+
+        public bool EmailWhithAttachmentExists()
+        {
+            return _inboxPageModel
+                .FirstEmailRow
+                .FindElements(By.XPath("//div[1]/div/table/colgroup/../tbody/tr[1]//img[@alt='Attachment']"))
+                .Any();
         }
 
         public bool IsPopupAppeared()
@@ -182,7 +181,7 @@ namespace AutomationTests.PageRouters
             _driver.WaitForAjax();
         }
 
-        public void CleareSpam()
+        public void ClearSpam()
         {
             NavigateToSpamFolder();
             _spamPageModel.SelectAllCheckbox.Click();
@@ -264,6 +263,27 @@ namespace AutomationTests.PageRouters
             var endNow = _driver.FindElement(By.XPath(string.Format("{0}{1}[1]", AutomationTestsConstants.TopVacationXpath, AutomationTestsConstants.Span))).Text;
             var settings = _driver.FindElement(By.XPath(string.Format("{0}{1}[2]", AutomationTestsConstants.TopVacationXpath, AutomationTestsConstants.Span))).Text;
             return all.Replace(endNow, string.Empty).Replace(settings, string.Empty).TrimEnd();
+        }
+
+        public bool IsNestedLabelEsxists()
+        {
+            try
+            {
+                //_boxPageModel.MyShortcutLeftTriangle.Click();
+                _boxPageModel.NestedLabel.Click();
+                return true;
+            }
+            catch (NoSuchElementException)
+            {
+                return false;
+            }
+        }
+
+        public void DeleteFirstMessage()
+        {
+            _boxPageModel.CheckFirstEmail.Click();
+            _boxPageModel.DeleteMessageButton.Click();
+            _boxPageModel.ButtonOk.Click();
         }
     }
 }

@@ -11,5 +11,7 @@ namespace AutomationTests.PageModels
         public IWebElement FirstEmailRowElement { get; set; }
         [FindsBy(How = How.XPath, Using = "//div[1]/div/table/tbody/tr[1]/td[4]/div[2]/span")]
         public IWebElement FirstEmailRowElementInSpam { get; set; }
+        [FindsBy(How = How.XPath, Using = "//div[1]/div/table/colgroup/../tbody/tr[1]")]
+        public IWebElement FirstEmailRow { get; set; }
     }
 }

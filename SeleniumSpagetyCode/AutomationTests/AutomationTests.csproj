@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Constants\AutomationTestsConstants.cs" />
     <Compile Include="Extentions\WebDriverExtensions.cs" />
+    <Compile Include="Extentions\WebElementExtentions.cs" />
     <Compile Include="Helpers\CommonHelper.cs" />
     <Compile Include="Helpers\FiltersHelper.cs" />
     <Compile Include="Helpers\ForwardingHelper.cs" />
@@ -76,11 +77,16 @@
     <Compile Include="PageModels\Box\ThemesPageModel.cs" />
     <Compile Include="PageModels\Settings\FiltersPageModel.cs" />
     <Compile Include="PageModels\Settings\ForwardingPageModel.cs" />
+    <Compile Include="PageModels\Settings\LabelsPageModels.cs" />
     <Compile Include="PageModels\Settings\SettingsPageModel.cs" />
     <Compile Include="PageModels\LogOnPageModel.cs" />
     <Compile Include="PageModels\PageModel.cs" />
+    <Compile Include="PageModels\Shortcuts\AddLabelPageModel.cs" />
+    <Compile Include="PageModels\Shortcuts\MyShortcutMenuPageModel.cs" />
+    <Compile Include="PageModels\Shortcuts\SetColorPageModel.cs" />
     <Compile Include="PageRouters\BoxRouter.cs" />
     <Compile Include="PageRouters\LogonRouter.cs" />
+    <Compile Include="PageRouters\MyShortcutMenuRouter.cs" />
     <Compile Include="PageRouters\SettingsRouter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="PropertiesCollection.cs" />

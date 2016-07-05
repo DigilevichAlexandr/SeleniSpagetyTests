@@ -29,17 +29,34 @@
         public const string PopupOkButtonXpath = "//button[@name='ok']";
         public const string PopupCloseButtonXpath = "//span[@aria-label='Close']";
         public const string TopVacationXpath = "//a[@target='_top']/../../../div[3]/div/div";
+        public const string ColorsXpath = "//td[@role='gridcell']/div[starts-with(@title,'RGB')]";
+        public const string MyShortcutSquareXpath = "//a[starts-with(@title, '{0}')]/../../../div[3]/div";
+        public const string LabelXpath = "//a[@title='{0}']";
+
 
         public const string SettingsUrl = "https://mail.google.com/mail/#settings/general";
         public const string ForwardingUrl = "https://mail.google.com/mail/#settings/fwdandpop";
         public const string ChoseAnAccountUrl = "https://accounts.google.com/SignOutOptions?hl=en&continue=https://mail.google.com/mail&service=mail";
         public const string FiltersUrl = "https://mail.google.com/mail/#settings/filters";
         public const string StarredUrl = "https://mail.google.com/mail/u/0/#starred?compose=new";
+        public const string SentUrl = "https://mail.google.com/mail/u/0/#sent";
+        public const string LabelsUrl = "https://mail.google.com/mail/u/0/#settings/labels";
 
         public const string SignatureText = "TestSignature";
         public const string VacationDate = "July 10, 2016";
         public const string VacationText = "summer vacation";
         public const string SlashTwoDots = "/..";
         public const string Span = "/span";
+        public const string TwoSlashOption = "//option";
+
+        public const string LabelName = "My shortcut";
+        public const string NestedLabelName = "My inserted shortcut";
+
+        public enum LabelColors
+        {
+            Non = 1,
+            Red = 11,
+            Green = 23
+        }
     }
 }

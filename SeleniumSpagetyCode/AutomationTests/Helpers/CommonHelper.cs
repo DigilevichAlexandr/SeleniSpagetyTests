@@ -42,7 +42,6 @@ namespace AutomationTests.Helpers
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

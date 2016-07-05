@@ -29,6 +29,24 @@ namespace AutomationTests.PageModels
         public IWebElement Star { get; set; }
         [FindsBy(How = How.XPath, Using = "//a[@target='_top']/../../../div[3]/div/div/span[1]")]
         public IWebElement VacationDateOnTop { get; set; }
+        [FindsBy(How = How.XPath, Using = "//a[@title='My shortcut']/../../../div[3]")]
+        public IWebElement MyShortcutRightTriangle { get; set; }
+        [FindsBy(How = How.XPath, Using = "//a[starts-with(@title, 'My inserted shortcut')]/../../../div[3]")]
+        public IWebElement MyNestedShortcutRightTriangle { get; set; }
+        [FindsBy(How = How.XPath, Using = "//a[@title='My inserted shortcut']/../../../..")]
+        public IWebElement MyNestedShortcut { get; set; }
+        [FindsBy(How = How.XPath, Using = "//div[14][@role='menuitem']/div")]
+        public IWebElement AddSublabel { get; set; }
+        [FindsBy(How = How.XPath, Using = "//div[@title='Collapse label: My shortcut']")]
+        public IWebElement MyShortcutLeftTriangle { get; set; }
+        [FindsBy(How = How.XPath, Using = "//a[@title='My inserted shortcut']")]
+        public IWebElement NestedLabel { get; set; }
+        [FindsBy(How = How.XPath, Using = "//div[starts-with(@style,'opacity: 1')]")]
+        public IWebElement Background { get; set; }
+        [FindsBy(How = How.XPath, Using = "//div[@style='display: none;']/div[@data-tooltip='Delete']")]
+        public IWebElement DeleteMessageButton { get; set; }
+        [FindsBy(How = How.XPath, Using = "//button[@name='ok']")]
+        public IWebElement ButtonOk { get; set; }
 
     }
 }

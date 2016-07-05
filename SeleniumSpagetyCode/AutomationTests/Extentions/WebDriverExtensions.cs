@@ -11,7 +11,6 @@ namespace AutomationTests.Extentions
 {
     public static class WebDriverExtensions
     {
-
         public static void WaitForAjax(this IWebDriver webDriver)
         {
             const string jsCommand = "if (typeof jQuery != 'undefined') { return (jQuery.active === 0) } else { return true }";
