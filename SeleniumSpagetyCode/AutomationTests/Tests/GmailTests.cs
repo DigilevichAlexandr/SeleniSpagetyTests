@@ -106,7 +106,13 @@ namespace AutomationTests.Tests
             _logonRouter.LogOn(_user1);
             CommonHelper.GenerateFile(AutomationTestsConstants.TestFilesName, 25);
             _boxRouter.Send(_letter1, AutomationTestsConstants.TestFilesName);
+            Assert.True(_boxRouter.IsPopupAppeared());
 
+            Driver.FindElement(By.XPath(AutomationTestsConstants.PopupCloseButtonXpath)).Click();
+            if (_boxRouter.IsPopupAppeared())
+            {
+                Driver.FindElement(By.XPath(AutomationTestsConstants.PopupCloseButtonXpath)).Click();
+            }
         }
 
         [Test]

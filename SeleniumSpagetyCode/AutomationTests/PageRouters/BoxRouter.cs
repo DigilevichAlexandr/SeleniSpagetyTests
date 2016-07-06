@@ -119,11 +119,7 @@ namespace AutomationTests.PageRouters
                 AttachFile(name);
                 if (IsPopupAppeared())
                 {
-                    _driver.FindElement(By.XPath(AutomationTestsConstants.PopupCloseButtonXpath)).Click();
-                    if (IsPopupAppeared())
-                    {
-                        _driver.FindElement(By.XPath(AutomationTestsConstants.PopupCloseButtonXpath)).Click();
-                    }
+                    return;
                 }
             }
 
