@@ -33,7 +33,7 @@ namespace AutomationTests.PageRouters
         public void AddLabel(string name)
         {
             _driver.Navigate().GoToUrl(AutomationTestsConstants.LabelsUrl);
-            _driver.WaitForAjax();
+            Thread.Sleep(2000);
             _labelsPageModels.CreateLabelButton.Click();
             _addLabelPageModel.LabelNameInput.SendKeys(name);
             _addLabelPageModel.ButtonOk.Click();
@@ -74,6 +74,9 @@ namespace AutomationTests.PageRouters
 
         public void DeleteLabel(string name)
         {
+            IWebElement element = _driver.FindElement(By.XPath(string.Format(AutomationTestsConstants.LabelXpath, name)));
+            Actions actions = new Actions(_driver);
+            actions.MoveToElement(element).Perform();
             _driver.FindElement(By.XPath(string.Format(AutomationTestsConstants.MyShortcutSquareXpath, name))).Click();
             _myShortcutMenuPageModel.Delete.Click();
             _addLabelPageModel.ButtonOk.Click();

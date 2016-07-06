@@ -31,7 +31,7 @@ namespace AutomationTests.PageModels
         public IWebElement VacationDateOnTop { get; set; }
         [FindsBy(How = How.XPath, Using = "//a[@title='My shortcut']/../../../div[3]")]
         public IWebElement MyShortcutRightTriangle { get; set; }
-        [FindsBy(How = How.XPath, Using = "//a[starts-with(@title, 'My inserted shortcut')]/../../../div[3]")]
+        [FindsBy(How = How.XPath, Using = "//a[@title='My shortcut']/../../..//div[text()='▼']")]
         public IWebElement MyNestedShortcutRightTriangle { get; set; }
         [FindsBy(How = How.XPath, Using = "//a[@title='My inserted shortcut']/../../../..")]
         public IWebElement MyNestedShortcut { get; set; }
@@ -39,6 +39,8 @@ namespace AutomationTests.PageModels
         public IWebElement AddSublabel { get; set; }
         [FindsBy(How = How.XPath, Using = "//div[@title='Collapse label: My shortcut']")]
         public IWebElement MyShortcutLeftTriangle { get; set; }
+        [FindsBy(How = How.XPath, Using = "//div[@title='Expand label: My shortcut']")]
+        public IWebElement MyShortcutLeftTriangleCollapsed { get; set; }
         [FindsBy(How = How.XPath, Using = "//a[@title='My inserted shortcut']")]
         public IWebElement NestedLabel { get; set; }
         [FindsBy(How = How.XPath, Using = "//div[starts-with(@style,'opacity: 1')]")]
@@ -47,6 +49,7 @@ namespace AutomationTests.PageModels
         public IWebElement DeleteMessageButton { get; set; }
         [FindsBy(How = How.XPath, Using = "//button[@name='ok']")]
         public IWebElement ButtonOk { get; set; }
-
+        [FindsBy(How = How.XPath, Using = "//a[@title='My shortcut']")]
+        public IWebElement MyShortcut { get; set; }
     }
 }

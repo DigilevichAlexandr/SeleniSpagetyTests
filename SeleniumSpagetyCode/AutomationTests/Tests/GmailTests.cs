@@ -100,14 +100,14 @@ namespace AutomationTests.Tests
             _boxRouter.Logout();
         }
 
-        //[Test]
-        //public void MailWithAttachment_BigFile_Test()
-        //{
-        //    _logonRouter.LogOn(_user1);
-        //    CommonHelper.GenerateFile(AutomationTestsConstants.TestFilesName, 25);
-        //    _boxRouter.Send(_letter1, AutomationTestsConstants.TestFilesName);
+        [Test]
+        public void MailWithAttachment_BigFile_Test()
+        {
+            _logonRouter.LogOn(_user1);
+            CommonHelper.GenerateFile(AutomationTestsConstants.TestFilesName, 25);
+            _boxRouter.Send(_letter1, AutomationTestsConstants.TestFilesName);
 
-        //}
+        }
 
         [Test]
         public void Themes_Test()
@@ -159,12 +159,25 @@ namespace AutomationTests.Tests
         public void DeleteShortcut_Test()
         {
             _logonRouter.LogOn(_user1);
+            if (_myShortcutMenuRouter.IsLabelExists(AutomationTestsConstants.LabelName))
+            {
+                _myShortcutMenuRouter.DeleteLabel(AutomationTestsConstants.LabelName);
+            }
+
             _myShortcutMenuRouter.AddLabel(AutomationTestsConstants.LabelName);
             _myShortcutMenuRouter.AddSubLabel(AutomationTestsConstants.NestedLabelName);
+
             Assert.True(_myShortcutMenuRouter.IsLabelExists(AutomationTestsConstants.LabelName));
+            Actions action = new Actions(Driver);
+            action.MoveToElement(_boxPageModel.MyShortcut).Perform();
+            _boxPageModel.MyShortcutLeftTriangleCollapsed.Click();
             Assert.True(_myShortcutMenuRouter.IsLabelExists(AutomationTestsConstants.NestedLabelName));
+
+            _myShortcutMenuRouter.DeleteLabel(AutomationTestsConstants.NestedLabelName);
+            Thread.Sleep(2000);
             _myShortcutMenuRouter.DeleteLabel(AutomationTestsConstants.LabelName);
-            _myShortcutMenuRouter.DeleteLabel(AutomationTestsConstants.LabelName);
+            Thread.Sleep(2000);
+
             Assert.False(_myShortcutMenuRouter.IsLabelExists(AutomationTestsConstants.LabelName));
             Assert.False(_myShortcutMenuRouter.IsLabelExists(AutomationTestsConstants.NestedLabelName));
         }
